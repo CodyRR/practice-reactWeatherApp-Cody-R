@@ -1,0 +1,38 @@
+#container{
+  padding-left: 1em;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0; 
+}
+
+li {
+  position: relative;
+  padding-left: 1.5em;
+  margin-bottom: 0.5em;
+  font-size: larger;
+}
+
+li::before {
+  content: '▶';
+  position: absolute;
+  left: 0;
+  color: #0718ca;
+  font-size: 1em;
+}
+
+p {
+  font-size: large;
+}
+
+button {
+  width: 10em;
+  height: 2.5em;
+  border-radius: 4px;
+}
+
+button:hover{
+  background-color: rgb(151, 149, 150);
+  color: white;
+}

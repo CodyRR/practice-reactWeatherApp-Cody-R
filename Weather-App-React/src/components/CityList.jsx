@@ -5,10 +5,11 @@ import CityForcast from './CityForecast';
 export default function CityList () {
 
     const [selectedCity, setSelectedCity] = useState(null);
-    const cities = Object.keys(weatherData)
+    const cities = Object.keys(weatherData);
+    let errorCityTest = "Kansas City"
 
     return (
-        <div>
+        <div id="container">
             <h1>Choose City</h1>
             <ul>
                 {cities.map((city) => (
@@ -16,6 +17,7 @@ export default function CityList () {
                         {city}
                     </li>
                 ))}
+                <li key="errorTest" onClick={() => setSelectedCity(errorCityTest)}>Error</li>
             </ul>
 
             <CityForcast selectedCity={selectedCity} />
